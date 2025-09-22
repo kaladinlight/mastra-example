@@ -1,0 +1,32 @@
+{
+  "name": "mastra-example",
+  "version": "0.0.0",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=23"
+  },
+  "scripts": {
+    "clean": "rm -rf node_modules .mastra",
+    "dev": "npx concurrently \"mastra dev -d ./mastra\" \"yarn workspace app dev\""
+  },
+  "dependencies": {
+    "@ai-sdk/openai": "^2.0.32",
+    "@mastra/ai-sdk": "^0.0.3",
+    "@mastra/core": "^0.17.1",
+    "@mastra/libsql": "^0.14.2",
+    "@mastra/loggers": "^0.10.12",
+    "@mastra/memory": "^0.15.2",
+    "zod": "^4.1.11"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.1",
+    "mastra": "^0.13.1",
+    "typescript": "^5.8.3"
+  },
+  "workspaces": [
+    "app"
+  ],
+  "packageManager": "yarn@4.9.4"
+}
